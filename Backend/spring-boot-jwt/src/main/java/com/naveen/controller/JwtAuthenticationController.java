@@ -19,7 +19,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.naveen.config.JwtTokenUtil;
 import com.naveen.model.JwtRequest;
 import com.naveen.model.JwtResponse;
-import com.naveen.model.User;
 
 @RestController
 @CrossOrigin
@@ -33,9 +32,6 @@ public class JwtAuthenticationController {
 
 	@Autowired
 	private UserDetailsService jwtInMemoryUserDetailsService;
-	
-	
-	
 
 	@RequestMapping(value = "/authenticate", method = RequestMethod.POST)
 	public ResponseEntity<?> createAuthenticationToken(@RequestBody JwtRequest authenticationRequest)
