@@ -45,6 +45,19 @@ public String getPassword() {
 public void setPassword(String password) {
 	this.password = password;
 }
+
+
+public User(String name, String id, String password) {
+	this.id = id;
+	this.name = name;
+	this.password = password;
+}
+
+
+public User() {
+	// TODO Auto-generated constructor stub
+}
+
 	
 
 }

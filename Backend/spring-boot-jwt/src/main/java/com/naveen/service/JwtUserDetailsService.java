@@ -43,10 +43,30 @@ public class JwtUserDetailsService implements UserDetailsService {
 //	}
 		@Override
 		public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-			if ("javainuse".equals(username)) {
-				return new User("javainuse", "$2a$10$slYQmyNdGzTn7ZLBXBChFOC9f6kFjAqPhccnP6DxlWXx2lPk1C3G6",
-						new ArrayList<>());
-			} else {
+			
+//			com.naveen.model.User user = userRepository.findByName(username);
+//			
+//			if(user!=null)
+//			{
+//				System.out.println("****************************");
+//				
+//				System.out.println(user.getName());
+//				
+//				return new User(user.getName(), "$2a$04$ux/DYTxqqYsp/PT9wlG.HeXsSRbrq8f.BFij76E0zVs14HHkUMX56",
+//						new ArrayList<>());	
+//			}
+			
+			//if ("javainuse".equals(username)) 
+			System.out.println("****************************"+username);
+			com.naveen.model.User user = userRepository.findByName(username);	
+			System.out.println("((((((((((((("+user);
+			if(user!=null){
+				
+				System.out.println("inside userdetail##############");
+				return new User(user.getName(), user.getPassword(),new ArrayList<>());
+				
+			} 
+			else {
 				throw new UsernameNotFoundException("User not found with username: " + username);
 			}
 		}
