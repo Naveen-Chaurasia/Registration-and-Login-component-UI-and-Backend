@@ -1,0 +1,41 @@
+#server.port:8088
+#jwt.secret=javainuse
+#jwt.get.token.uri=/authenticate
+#
+#
+#spring.data.mongodb.host=localhost
+#spring.data.mongodb.port=27017
+
+
+jwt:
+  get:
+    token:
+      uri: /authenticate
+  secret: javainuse
+  
+server:
+  port: '8088'
+  
+spring:
+  data:
+    mongodb:
+      port: '27017'
+      host: localhost
+      
+management:
+  endpoints:
+    web:
+      base-path: /actuator
+      exposure:
+        include: [ "health","prometheus", "metrics" ]
+  endpoint:
+    health:
+      show-details: always
+    metrics:
+      enabled: true
+    prometheus:
+      enabled: true      
+      
+      
+      
+ 
