@@ -7,7 +7,7 @@
 #spring.data.mongodb.port=27017
 #https://betterprogramming.pub/how-to-monitor-a-spring-boot-app-with-prometheus-and-grafana-22e2338f97fc
 #http://host.docker.internal:9090 //give this in docker- grafana local server name.will not work with localhost:9090
-
+#https://www.javainuse.com/spring/boot-jwt-mysql
 
  
 jwt:
